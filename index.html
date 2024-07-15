@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Bienvenue sur mon site</h1>
+    </div>
+    <div id="main-content">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="page1.html">Algorithmes Gloutons</a></li>
+            <li><a href="page2.html">Commandes Linux</a></li>
+        </ul>
+
+        <!-- Ajout d'une image -->
+        <div class="image-section">
+            <img src="bart.jpg" alt="Bart qui ecrit" style="max-width: 75%; height: auto;">
+        </div>
+
+        <!-- Ajout d'un tableau -->
+        <div class="table-section">
+            <h2>Tableau des commentaires</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Âge</th>
+                        <th>Commentaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jean Dupont</td>
+                        <td>30</td>
+                        <td>Insane code !</td>
+                    </tr>
+                    <tr>
+                        <td>Marie Durand</td>
+                        <td>25</td>
+                        <td>J'adore les codes gloutons, ils ont refais ma vie.</td>
+                    </tr>
+                    <tr>
+                        <td>Paul Martin</td>
+                        <td>35</td>
+                        <td>Ces codes sont nul a chier.</td>
+                    </tr>
+					<tr>
+                        <td>Jean Paul Gaultier</td>
+                        <td>24</td>
+                        <td>......</td>
+                    </tr>
+					<tr>
+                        <td>Alexadanre le Grand</td>
+                        <td>2350</td>
+                        <td>C'est quoi cette merde</td>
+                    </tr>
+					<tr>
+                        <td>Julius Caesar</td>
+                        <td>2118</td>
+                        <td>Les ecrits des Dieux?</td>
+                    </tr>
+					<tr>
+                        <td>Abraham Lincoln</td>
+                        <td>215</td>
+                        <td>Who wrote this?</td>
+                    </tr>
+					<tr>
+                        <td>Elon Musk</td>
+                        <td>53</td>
+                        <td>Mid</td>
+                    </tr>
+					<tr>
+                        <td>Fire extinguisher</td>
+                        <td>1</td>
+                        <td>Nah, I'd win.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Formulaire de Contact -->
+        <div class="form-example">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <div>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="submit-button">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

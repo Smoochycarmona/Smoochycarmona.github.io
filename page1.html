@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Algorithmes Gloutons</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Algorithmes Gloutons</h1>
+    </div>
+    <div id="main-content">
+        <h2>Explication</h2>
+        <p>Un algorithme glouton est une méthode de résolution de problèmes qui construit une solution morceau par morceau, en choisissant à chaque étape l'option optimale locale avec l'espoir que ce choix conduira à une solution optimale globale.</p>
+        <h2>Exemples</h2>
+        <ul>
+            <li><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos">Problème du sac à dos</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_la_monnaie">Problème de la monnaie</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce">Problème du voyageur de commerce (approximation)</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_couverture_de_sommets">Problème de couverture de sommets</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_d%27ordonnancement">Problème de l'ordonnancement des tâches</a></li>
+        </ul>
+        <h2>Situation Originale</h2>
+        <p>Organisation d'un festival où plusieurs conférences doivent avoir lieu. Chaque conférence a un horaire de début et de fin, et vous voulez maximiser le nombre de conférences que vous pouvez assister en totalité.</p>
+        <pre><code>def selection_conferences(conferences):
+    conferences.sort(key=lambda x: x[1])
+    selected_conferences = []
+    last_end_time = 0
+    for conference in conferences:
+        if conference[0] >= last_end_time:
+            selected_conferences.append(conference)
+            last_end_time = conference[1]
+    return selected_conferences
+
+conferences = [
+    (9, 10),
+    (9.5, 11),
+    (10, 11.5),
+    (11, 12),
+    (11.5, 13),
+    (12, 14),
+    (13, 14.5)
+]
+
+selected_conferences = selection_conferences(conferences)
+print("Conférences sélectionnées :")
+for start, end in selected_conferences:
+    print(f"Début : {start}, Fin : {end}")</code></pre>
+    </div>
+</body>
+</html>
